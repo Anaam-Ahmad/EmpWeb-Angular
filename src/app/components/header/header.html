@@ -1,0 +1,30 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top shadow">
+  <div class="container">
+    <a class="navbar-brand fw-bold" routerLink="/employees">
+      <span class="me-2">👥</span>Employee Web
+    </a>
+
+    <button class="navbar-toggler" type="button"
+            aria-label="Toggle navigation"
+            [attr.aria-expanded]="!isCollapsed()"
+            (click)="toggleMenu()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="navbar-collapse collapse" [class.show]="!isCollapsed()">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/employee" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Employees</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/employee/new" routerLinkActive="active">Add Employee</a>
+        </li>
+      </ul>
+
+      <div class="d-flex align-items-center text-white">
+        <span class="me-3 small">Welcome, Admin</span>
+        <button class="btn btn-outline-light btn-sm">Logout</button>
+      </div>
+    </div>
+  </div>
+</nav>
